@@ -1,0 +1,1951 @@
+have_header: checking for unistd.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <unistd.h>
+/* end */
+
+--------------------
+
+have_header: checking for ncurses.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <ncurses.h>
+/* end */
+
+--------------------
+
+have_library: checking for wmove() in -lncurses... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wmove’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wmove; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic     -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wmove’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wmove(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for newscr()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘newscr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))newscr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘newscr’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { newscr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for TABSIZE()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘TABSIZE’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))TABSIZE; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘TABSIZE’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { TABSIZE(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ESCDELAY()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘ESCDELAY’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))ESCDELAY; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘ESCDELAY’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { ESCDELAY(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for keybound()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘keybound’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))keybound; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘keybound’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { keybound(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for curses_version()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘curses_version’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))curses_version; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘curses_version’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { curses_version(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for tigetstr()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘tigetstr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))tigetstr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘tigetstr’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { tigetstr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getwin()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘getwin’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))getwin; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘getwin’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { getwin(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for putwin()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘putwin’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))putwin; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘putwin’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { putwin(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ungetmouse()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘ungetmouse’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))ungetmouse; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘ungetmouse’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { ungetmouse(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mousemask()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mousemask’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mousemask; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mousemask’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mousemask(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wenclose()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wenclose’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wenclose; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wenclose’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wenclose(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mouseinterval()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mouseinterval’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mouseinterval; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mouseinterval’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mouseinterval(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wmouse_trafo()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wmouse_trafo’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wmouse_trafo; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wmouse_trafo’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wmouse_trafo(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mcprint()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mcprint’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mcprint; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mcprint’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mcprint(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for has_key()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘has_key’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))has_key; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘has_key’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { has_key(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for delscreen()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘delscreen’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))delscreen; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘delscreen’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { delscreen(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for define_key()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘define_key’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))define_key; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘define_key’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { define_key(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for keyok()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘keyok’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))keyok; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘keyok’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { keyok(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for resizeterm()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘resizeterm’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))resizeterm; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘resizeterm’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { resizeterm(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for use_default_colors()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘use_default_colors’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))use_default_colors; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘use_default_colors’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { use_default_colors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for use_extended_names()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘use_extended_names’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))use_extended_names; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘use_extended_names’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { use_extended_names(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wresize()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wresize’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wresize; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wresize’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wresize(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for attr_on()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘attr_on’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))attr_on; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘attr_on’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { attr_on(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for attr_off()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘attr_off’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))attr_off; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘attr_off’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { attr_off(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for attr_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘attr_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))attr_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘attr_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { attr_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for chgat()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘chgat’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))chgat; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘chgat’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { chgat(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for color_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘color_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))color_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘color_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { color_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for filter()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘filter’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))filter; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘filter’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { filter(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for intrflush()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘intrflush’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))intrflush; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘intrflush’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { intrflush(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvchgat()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvchgat’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvchgat; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvchgat’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvchgat(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvhline()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvhline’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvhline; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvhline’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvhline(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvvline()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvvline’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvvline; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvvline’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvvline(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvwchgat()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvwchgat’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvwchgat; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvwchgat’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvwchgat(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvwhline()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvwhline’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvwhline; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvwhline’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvwhline(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for mvwvline()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘mvwvline’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))mvwvline; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘mvwvline’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { mvwvline(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for noqiflush()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘noqiflush’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))noqiflush; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘noqiflush’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { noqiflush(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for putp()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘putp’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))putp; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘putp’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { putp(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for qiflush()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘qiflush’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))qiflush; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘qiflush’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { qiflush(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for scr_dump()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘scr_dump’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))scr_dump; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘scr_dump’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { scr_dump(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for scr_init()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘scr_init’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))scr_init; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘scr_init’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { scr_init(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for scr_restore()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘scr_restore’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))scr_restore; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘scr_restore’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { scr_restore(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for scr_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘scr_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))scr_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘scr_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { scr_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for slk_attr_off()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘slk_attr_off’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))slk_attr_off; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘slk_attr_off’
+/tmp/ccAq08iM.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `slk_attr_off'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { slk_attr_off(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for slk_attr_on()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘slk_attr_on’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))slk_attr_on; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘slk_attr_on’
+/tmp/ccoAlryN.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `slk_attr_on'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { slk_attr_on(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for slk_attr()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘slk_attr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))slk_attr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘slk_attr’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { slk_attr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for slk_attr_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘slk_attr_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))slk_attr_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘slk_attr_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { slk_attr_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for slk_color()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘slk_color’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))slk_color; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘slk_color’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { slk_color(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for tigetflag()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘tigetflag’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))tigetflag; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘tigetflag’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { tigetflag(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for tigetnum()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘tigetnum’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))tigetnum; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘tigetnum’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { tigetnum(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for use_env()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘use_env’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))use_env; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘use_env’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { use_env(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for vidattr()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘vidattr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))vidattr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘vidattr’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { vidattr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for vid_attr()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘vid_attr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))vid_attr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘vid_attr’
+/tmp/ccUCLoZm.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `vid_attr'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { vid_attr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wattr_on()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wattr_on’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wattr_on; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wattr_on’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wattr_on(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wattr_off()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wattr_off’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wattr_off; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wattr_off’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wattr_off(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wattr_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wattr_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wattr_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wattr_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wattr_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wchgat()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wchgat’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wchgat; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wchgat’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wchgat(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for wcolor_set()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘wcolor_set’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))wcolor_set; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘wcolor_set’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { wcolor_set(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getattrs()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘getattrs’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))getattrs; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘getattrs’
+/tmp/ccMEEKtd.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `getattrs'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { getattrs(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracef()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracef’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracef; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracef’
+/tmp/ccy0cPHO.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracef'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracef(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracedump()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracedump’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracedump; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracedump’
+/tmp/ccgwYXJt.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracedump'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracedump(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _nc_tracebits()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_nc_tracebits’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_nc_tracebits; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_nc_tracebits’
+/tmp/ccumPrO0.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_nc_tracebits'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _nc_tracebits(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _traceattr()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_traceattr’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_traceattr; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_traceattr’
+/tmp/ccghqyvk.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_traceattr'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _traceattr(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _traceattr2()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_traceattr2’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_traceattr2; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_traceattr2’
+/tmp/ccq7IL8O.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_traceattr2'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _traceattr2(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracechar()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracechar’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracechar; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracechar’
+/tmp/ccmWQoYp.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracechar'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracechar(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracechtype()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracechtype’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracechtype; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracechtype’
+/tmp/cckAuQi4.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracechtype'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracechtype(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracechtype2()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracechtype2’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracechtype2; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracechtype2’
+/tmp/ccMOTJpl.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracechtype2'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracechtype2(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _tracemouse()... -------------------- no
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘_tracemouse’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))_tracemouse; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘_tracemouse’
+/tmp/ccaaAvFS.o: In function `t':
+/var/lib/gems/1.8/gems/ncurses-0.9.1/conftest.c:3: undefined reference to `_tracemouse'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { _tracemouse(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for assume_default_colors()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘assume_default_colors’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))assume_default_colors; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘assume_default_colors’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { assume_default_colors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for attr_get()... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘attr_get’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))attr_get; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘attr_get’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { attr_get(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for panel.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <panel.h>
+/* end */
+
+--------------------
+
+have_library: checking for panel_hidden() in -lpanel... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lpanel -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘panel_hidden’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))panel_hidden; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lncurses  -lruby1.8-static -lpanel -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘panel_hidden’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { panel_hidden(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for form.h... -------------------- yes
+
+"gcc -E -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <form.h>
+/* end */
+
+--------------------
+
+have_library: checking for new_form() in -lform... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lpanel -lncurses  -lruby1.8-static -lform -lpanel -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: error: ‘new_form’ undeclared (first use in this function)
+conftest.c:3: error: (Each undeclared identifier is reported only once
+conftest.c:3: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))new_form; return 0; }
+/* end */
+
+"gcc -o conftest -I. -I/usr/lib/ruby/1.8/i486-linux -I.  -Wall -g -fno-strict-aliasing -O2  -fPIC -g conftest.c  -L"/usr/lib"  -rdynamic -Wl,-export-dynamic    -lpanel -lncurses  -lruby1.8-static -lform -lpanel -lncurses  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:3: warning: implicit declaration of function ‘new_form’
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { new_form(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,93 @@
+ruby extconf.rb install rake ferret ncurses rmail highlight net-ssh trollop lockfile mime-types
+checking for unistd.h... yes
+checking for ncurses.h... yes
+checking for wmove() in -lncurses... yes
+checking for newscr()... yes
+checking for TABSIZE()... yes
+checking for ESCDELAY()... yes
+checking for keybound()... yes
+checking for curses_version()... yes
+checking for tigetstr()... yes
+checking for getwin()... yes
+checking for putwin()... yes
+checking for ungetmouse()... yes
+checking for mousemask()... yes
+checking for wenclose()... yes
+checking for mouseinterval()... yes
+checking for wmouse_trafo()... yes
+checking for mcprint()... yes
+checking for has_key()... yes
+checking for delscreen()... yes
+checking for define_key()... yes
+checking for keyok()... yes
+checking for resizeterm()... yes
+checking for use_default_colors()... yes
+checking for use_extended_names()... yes
+checking for wresize()... yes
+checking for attr_on()... yes
+checking for attr_off()... yes
+checking for attr_set()... yes
+checking for chgat()... yes
+checking for color_set()... yes
+checking for filter()... yes
+checking for intrflush()... yes
+checking for mvchgat()... yes
+checking for mvhline()... yes
+checking for mvvline()... yes
+checking for mvwchgat()... yes
+checking for mvwhline()... yes
+checking for mvwvline()... yes
+checking for noqiflush()... yes
+checking for putp()... yes
+checking for qiflush()... yes
+checking for scr_dump()... yes
+checking for scr_init()... yes
+checking for scr_restore()... yes
+checking for scr_set()... yes
+checking for slk_attr_off()... no
+checking for slk_attr_on()... no
+checking for slk_attr()... yes
+checking for slk_attr_set()... yes
+checking for slk_color()... yes
+checking for tigetflag()... yes
+checking for tigetnum()... yes
+checking for use_env()... yes
+checking for vidattr()... yes
+checking for vid_attr()... no
+checking for wattr_on()... yes
+checking for wattr_off()... yes
+checking for wattr_set()... yes
+checking for wchgat()... yes
+checking for wcolor_set()... yes
+checking for getattrs()... no
+checking which debugging functions to wrap...
+checking for _tracef()... no
+checking for _tracedump()... no
+checking for _nc_tracebits()... no
+checking for _traceattr()... no
+checking for _traceattr2()... no
+checking for _tracechar()... no
+checking for _tracechtype()... no
+checking for _tracechtype2()... no
+checking for _tracemouse()... no
+checking for other functions that appeared after ncurses version 5.0...
+checking for assume_default_colors()... yes
+checking for attr_get()... yes
+checking for the panel library...
+checking for panel.h... yes
+checking for panel_hidden() in -lpanel... yes
+checking for the form library...
+checking for form.h... yes
+checking for new_form() in -lform... yes
+creating Makefile
+
+make
+gcc -I. -I. -I/usr/lib/ruby/1.8/i486-linux -I. -DHAVE_UNISTD_H -DHAVE_NCURSES_H -DHAVE_NEWSCR -DHAVE_TABSIZE -DHAVE_ESCDELAY -DHAVE_KEYBOUND -DHAVE_CURSES_VERSION -DHAVE_TIGETSTR -DHAVE_GETWIN -DHAVE_PUTWIN -DHAVE_UNGETMOUSE -DHAVE_MOUSEMASK -DHAVE_WENCLOSE -DHAVE_MOUSEINTERVAL -DHAVE_WMOUSE_TRAFO -DHAVE_MCPRINT -DHAVE_HAS_KEY -DHAVE_DELSCREEN -DHAVE_DEFINE_KEY -DHAVE_KEYOK -DHAVE_RESIZETERM -DHAVE_USE_DEFAULT_COLORS -DHAVE_USE_EXTENDED_NAMES -DHAVE_WRESIZE -DHAVE_ATTR_ON -DHAVE_ATTR_OFF -DHAVE_ATTR_SET -DHAVE_CHGAT -DHAVE_COLOR_SET -DHAVE_FILTER -DHAVE_INTRFLUSH -DHAVE_MVCHGAT -DHAVE_MVHLINE -DHAVE_MVVLINE -DHAVE_MVWCHGAT -DHAVE_MVWHLINE -DHAVE_MVWVLINE -DHAVE_NOQIFLUSH -DHAVE_PUTP -DHAVE_QIFLUSH -DHAVE_SCR_DUMP -DHAVE_SCR_INIT -DHAVE_SCR_RESTORE -DHAVE_SCR_SET -DHAVE_SLK_ATTR -DHAVE_SLK_ATTR_SET -DHAVE_SLK_COLOR -DHAVE_TIGETFLAG -DHAVE_TIGETNUM -DHAVE_USE_ENV -DHAVE_VIDATTR -DHAVE_WATTR_ON -DHAVE_WATTR_OFF -DHAVE_WATTR_SET -DHAVE_WCHGAT -DHAVE_WCOLOR_SET -DHAVE_ASSUME_DEFAULT_COLORS -DHAVE_ATTR_GET -DHAVE_PANEL_H -DHAVE_FORM_H  -fPIC -Wall -g -fno-strict-aliasing -O2  -fPIC -g  -c ncurses_wrap.c
+gcc -I. -I. -I/usr/lib/ruby/1.8/i486-linux -I. -DHAVE_UNISTD_H -DHAVE_NCURSES_H -DHAVE_NEWSCR -DHAVE_TABSIZE -DHAVE_ESCDELAY -DHAVE_KEYBOUND -DHAVE_CURSES_VERSION -DHAVE_TIGETSTR -DHAVE_GETWIN -DHAVE_PUTWIN -DHAVE_UNGETMOUSE -DHAVE_MOUSEMASK -DHAVE_WENCLOSE -DHAVE_MOUSEINTERVAL -DHAVE_WMOUSE_TRAFO -DHAVE_MCPRINT -DHAVE_HAS_KEY -DHAVE_DELSCREEN -DHAVE_DEFINE_KEY -DHAVE_KEYOK -DHAVE_RESIZETERM -DHAVE_USE_DEFAULT_COLORS -DHAVE_USE_EXTENDED_NAMES -DHAVE_WRESIZE -DHAVE_ATTR_ON -DHAVE_ATTR_OFF -DHAVE_ATTR_SET -DHAVE_CHGAT -DHAVE_COLOR_SET -DHAVE_FILTER -DHAVE_INTRFLUSH -DHAVE_MVCHGAT -DHAVE_MVHLINE -DHAVE_MVVLINE -DHAVE_MVWCHGAT -DHAVE_MVWHLINE -DHAVE_MVWVLINE -DHAVE_NOQIFLUSH -DHAVE_PUTP -DHAVE_QIFLUSH -DHAVE_SCR_DUMP -DHAVE_SCR_INIT -DHAVE_SCR_RESTORE -DHAVE_SCR_SET -DHAVE_SLK_ATTR -DHAVE_SLK_ATTR_SET -DHAVE_SLK_COLOR -DHAVE_TIGETFLAG -DHAVE_TIGETNUM -DHAVE_USE_ENV -DHAVE_VIDATTR -DHAVE_WATTR_ON -DHAVE_WATTR_OFF -DHAVE_WATTR_SET -DHAVE_WCHGAT -DHAVE_WCOLOR_SET -DHAVE_ASSUME_DEFAULT_COLORS -DHAVE_ATTR_GET -DHAVE_PANEL_H -DHAVE_FORM_H  -fPIC -Wall -g -fno-strict-aliasing -O2  -fPIC -g  -c panel_wrap.c
+gcc -I. -I. -I/usr/lib/ruby/1.8/i486-linux -I. -DHAVE_UNISTD_H -DHAVE_NCURSES_H -DHAVE_NEWSCR -DHAVE_TABSIZE -DHAVE_ESCDELAY -DHAVE_KEYBOUND -DHAVE_CURSES_VERSION -DHAVE_TIGETSTR -DHAVE_GETWIN -DHAVE_PUTWIN -DHAVE_UNGETMOUSE -DHAVE_MOUSEMASK -DHAVE_WENCLOSE -DHAVE_MOUSEINTERVAL -DHAVE_WMOUSE_TRAFO -DHAVE_MCPRINT -DHAVE_HAS_KEY -DHAVE_DELSCREEN -DHAVE_DEFINE_KEY -DHAVE_KEYOK -DHAVE_RESIZETERM -DHAVE_USE_DEFAULT_COLORS -DHAVE_USE_EXTENDED_NAMES -DHAVE_WRESIZE -DHAVE_ATTR_ON -DHAVE_ATTR_OFF -DHAVE_ATTR_SET -DHAVE_CHGAT -DHAVE_COLOR_SET -DHAVE_FILTER -DHAVE_INTRFLUSH -DHAVE_MVCHGAT -DHAVE_MVHLINE -DHAVE_MVVLINE -DHAVE_MVWCHGAT -DHAVE_MVWHLINE -DHAVE_MVWVLINE -DHAVE_NOQIFLUSH -DHAVE_PUTP -DHAVE_QIFLUSH -DHAVE_SCR_DUMP -DHAVE_SCR_INIT -DHAVE_SCR_RESTORE -DHAVE_SCR_SET -DHAVE_SLK_ATTR -DHAVE_SLK_ATTR_SET -DHAVE_SLK_COLOR -DHAVE_TIGETFLAG -DHAVE_TIGETNUM -DHAVE_USE_ENV -DHAVE_VIDATTR -DHAVE_WATTR_ON -DHAVE_WATTR_OFF -DHAVE_WATTR_SET -DHAVE_WCHGAT -DHAVE_WCOLOR_SET -DHAVE_ASSUME_DEFAULT_COLORS -DHAVE_ATTR_GET -DHAVE_PANEL_H -DHAVE_FORM_H  -fPIC -Wall -g -fno-strict-aliasing -O2  -fPIC -g  -c form_wrap.c
+gcc -shared -rdynamic -Wl,-export-dynamic   -L"/usr/lib" -o ncurses.so ncurses_wrap.o panel_wrap.o form_wrap.o  -lruby1.8 -lform -lpanel -lncurses  -lpthread -ldl -lcrypt -lm   -lc
+
+make install
+/usr/bin/install -c -m 0755 ncurses.so /var/lib/gems/1.8/gems/ncurses-0.9.1/lib
+
+make clean
