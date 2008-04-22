@@ -35,10 +35,8 @@ else
   raise "ncurses header file not found"
 end
 
-if have_library("ncurses", "wmove")
-  curses_lib = "ncurses"
-elsif have_library("pdcurses", "wmove")
-  curses_lib = "pdcurses"
+if have_library("ncursesw", "wmove")
+  curses_lib = "ncursesw"
 else
   raise "ncurses library not found"
 end
