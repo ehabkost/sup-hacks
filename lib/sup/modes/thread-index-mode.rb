@@ -16,21 +16,21 @@ EOS
 
   register_keymap do |k|
     k.add :load_threads, "Load #{LOAD_MORE_THREAD_NUM} more threads", 'M'
-    k.add_multi "Load all threads (! to confirm) :", '!' do |kk|
+    k.add_multi "Load all threads (! to confirm):", '!' do |kk|
       kk.add :load_all_threads, "Load all threads (may list a _lot_ of threads)", '!'
     end
     k.add :cancel_search, "Cancel current search", :ctrl_g
     k.add :reload, "Refresh view", '@'
     k.add :toggle_archived, "Toggle archived status", 'a'
     k.add :toggle_starred, "Star or unstar all messages in thread", '*'
-    k.add :toggle_new, "Toggle new/read status of all messages in thread", 'N'
+    k.add :toggle_read, "Toggle new/read status of all messages in thread", 'N'
     k.add :edit_labels, "Edit or add labels for a thread", 'l'
     k.add :edit_message, "Edit message (drafts only)", 'e'
     k.add :toggle_spam, "Mark/unmark thread as spam", 'S'
     k.add :toggle_deleted, "Delete/undelete thread", 'd'
     k.add :kill, "Kill thread (never to be seen in inbox again)", '&'
     k.add :save, "Save changes now", '$'
-    k.add :jump_to_next_new, "Jump to next new thread", :tab
+    k.add :jump_to_next_unread, "Jump to next unread thread", :tab
     k.add :reply, "Reply to latest message in a thread", 'r'
     k.add :forward, "Forward latest message in a thread", 'f'
     k.add :toggle_tagged, "Tag/untag selected thread", 't'
@@ -224,79 +224,36 @@ EOS
     end
   end
 
-  def actually_toggle_starred t
-    if t.has_label? :starred # if ANY message has a star
-      t.remove_label :starred # remove from all
-      UpdateManager.relay self, :unstarred, t.first
-    else
-      t.first.add_label :starred # add only to first
-      UpdateManager.relay self, :starred, t.first
-    end
-  end  
-
-  def toggle_starred 
-    t = cursor_thread or return
-    actually_toggle_starred t
-    update_text_for_line curpos
-    cursor_down
-  end
-
-  def multi_toggle_starred threads
-    threads.each { |t| actually_toggle_starred t }
-    regen_text
-  end
-
-  def actually_toggle_archived t
-    if t.has_label? :inbox
-      t.remove_label :inbox
-      UpdateManager.relay self, :archived, t.first
-    else
-      t.apply_label :inbox
-      UpdateManager.relay self, :unarchived, t.first
+  { :archived => [:inbox, :archived, :unarchived],
+    :read => [:unread, :read, :unread],
+    :spammed => [:spam, :unspammed, :spammed],
+    :deleted => [:deleted, :undeleted, :deleted],
+    :starred => [:starred, :unstarred, :starred],
+  }.each do |method, (label, removed_update, applied_update)|
+    define_method "actually_toggle_#{method}" do |t|
+      if t.has_label? label
+        t.remove_label label
+        UpdateManager.relay self, removed_update, t.first
+      else
+        t.apply_label label
+        UpdateManager.relay self, applied_update, t.first
+      end
     end
   end
 
-  def actually_toggle_spammed t
-    if t.has_label? :spam
-      t.remove_label :spam
-      UpdateManager.relay self, :unspammed, t.first
-    else
-      t.apply_label :spam
-      UpdateManager.relay self, :spammed, t.first
+  %w(starred archived read).each do |l|
+    m = "actually_toggle_#{l}"
+    define_method "multi_toggle_#{l}" do |threads|
+      threads.each { |t| send m, t }
+      regen_text
     end
-  end
 
-  def actually_toggle_deleted t
-    if t.has_label? :deleted
-      t.remove_label :deleted
-      UpdateManager.relay self, :undeleted, t.first
-    else
-      t.apply_label :deleted
-      UpdateManager.relay self, :deleted, t.first
+    define_method "toggle_#{l}" do
+      t = cursor_thread or next
+      send m, t
+      update_text_for_line curpos
+      cursor_down
     end
-  end
-
-  def toggle_archived 
-    t = cursor_thread or return
-    actually_toggle_archived t
-    update_text_for_line curpos
-  end
-
-  def multi_toggle_archived threads
-    threads.each { |t| actually_toggle_archived t }
-    regen_text
-  end
-
-  def toggle_new
-    t = cursor_thread or return
-    t.toggle_label :unread
-    update_text_for_line curpos
-    cursor_down
-  end
-
-  def multi_toggle_new threads
-    threads.each { |t| t.toggle_label :unread }
-    regen_text
   end
 
   def multi_toggle_tagged threads
@@ -316,7 +273,7 @@ EOS
     update
   end
 
-  def jump_to_next_new
+  def jump_to_next_unread
     n = @mutex.synchronize do
       ((curpos + 1) ... lines).find { |i| @threads[i].has_label? :unread } ||
         (0 ... curpos).find { |i| @threads[i].has_label? :unread }
@@ -326,7 +283,7 @@ EOS
       jump_to_line n unless n >= topline && n < botline
       set_cursor_pos n
     else
-      BufferManager.flash "No new messages"
+      BufferManager.flash "No unread messages"
     end
   end
 
