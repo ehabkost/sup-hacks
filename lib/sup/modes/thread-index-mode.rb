@@ -19,6 +19,12 @@ EOS
     k.add_multi "Load all threads (! to confirm):", '!' do |kk|
       kk.add :load_all_threads, "Load all threads (may list a _lot_ of threads)", '!'
     end
+    k.add_multi "Mark threads as (n)ew/(r)ead/(s)tarred/(u)nstarred:", "=" do |kk|
+      kk.add :mark_unread, "Mark thread as new/unread", "n"
+      kk.add :mark_read, "Mark as read", "r"
+      kk.add :mark_starred, "Mark as starred", "s"
+      kk.add :mark_unstarred, "Mark as starred", "u"
+    end
     k.add :cancel_search, "Cancel current search", :ctrl_g
     k.add :reload, "Refresh view", '@'
     k.add :toggle_archived, "Toggle archived status", 'a'
@@ -239,20 +245,56 @@ EOS
         UpdateManager.relay self, applied_update, t.first
       end
     end
+
+    define_method "actually_mark_#{method}" do |t|
+      next if t.nil? || t.has_label?(label)
+      t.remove_label label
+      UpdateManager.relay self, removed_update, t.first
+    end
+
+    define_method "actually_mark_un#{method}" do |t|
+      next if t.nil? || !t.has_label?(label)
+      t.apply_label label
+      UpdateManager.relay self, applied_update, t.first
+    end
   end
 
   %w(starred archived read).each do |l|
-    m = "actually_toggle_#{l}"
+    toggle_m = "actually_toggle_#{l}"
+    mark_m = "actually_mark_#{l}"
+    unmark_m = "actually_mark_un#{l}"
     define_method "multi_toggle_#{l}" do |threads|
-      threads.each { |t| send m, t }
+      threads.each { |t| send toggle_m, t }
+      regen_text
+    end
+
+    define_method "multi_mark_#{l}" do |threads|
+      threads.each { |t| send mark_m, t }
+      regen_text
+    end
+
+    define_method "multi_mark_un#{l}" do |threads|
+      threads.each { |t| send unmark_m, t }
       regen_text
     end
 
     define_method "toggle_#{l}" do
       t = cursor_thread or next
-      send m, t
+      send toggle_m, t
       update_text_for_line curpos
       cursor_down
+    end
+
+    define_method "mark_#{l}" do 
+      t = cursor_thread or next
+      send mark_m, t
+      update_text_for_line curpos
+    end
+      
+    define_method "mark_un#{l}" do 
+      t = cursor_thread or next
+      send unmark_m, t
+      update_text_for_line curpos
     end
   end
 
