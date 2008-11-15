@@ -27,7 +27,7 @@ class LabelSearchResultsMode < ThreadIndexMode
     case label
     when nil
     when :inbox
-      BufferManager.raise_to_front InboxMode.instance.buffer
+      BufferManager.raise_to_front MainInboxMode.instance.buffer
     else
       b, new = BufferManager.spawn_unless_exists("All threads with label '#{label}'") { LabelSearchResultsMode.new [label] }
       b.mode.load_threads :num => b.content_height if new
