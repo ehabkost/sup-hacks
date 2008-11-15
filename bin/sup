@@ -249,7 +249,9 @@ begin
       user_label = bm.ask_with_completions :label, "Show threads with label (enter for listing): ", labels
       unless user_label.nil?
         if user_label.empty?
-          bm.spawn_unless_exists("Label list") { LabelListMode.new }
+          bm.spawn_unless_exists("Label list") do
+            LabelListMode.new { |l| LabelSearchResultsMode.spawn_nicely l }
+          end
         else
           LabelSearchResultsMode.spawn_nicely user_label
         end

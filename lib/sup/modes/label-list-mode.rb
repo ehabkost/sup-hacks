@@ -8,10 +8,11 @@ class LabelListMode < LineCursorMode
     k.add :toggle_show_unread_only, "Toggle between showing all labels and those with unread mail", 'u'
   end
 
-  def initialize
+  def initialize &p
     @labels = []
     @text = []
     @unread_only = false
+    @proc = p
     super
     regen_text
   end
@@ -83,7 +84,7 @@ protected
   def select_label
     label, num_unread = @labels[curpos]
     return unless label
-    LabelSearchResultsMode.spawn_nicely label
+    @proc.call label
   end
 end
 
