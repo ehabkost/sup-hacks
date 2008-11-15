@@ -478,17 +478,17 @@ EOS
     ForwardMode.spawn_nicely :message => m
   end
 
-  def load_n_threads_background n=LOAD_MORE_THREAD_NUM, opts={}
+  def load_n_threads_background n=LOAD_MORE_THREAD_NUM, query_opts={}
     return if @load_thread # todo: wrap in mutex
     @load_thread = Redwood::reporting_thread("load threads for thread-index-mode") do
-      num = load_n_threads n, opts
-      opts[:when_done].call(num) if opts[:when_done]
+      num = load_n_threads n, query_opts
+      yield num if block_given?
       @load_thread = nil
     end
   end
 
   ## TODO: figure out @ts_mutex in this method
-  def load_n_threads n=LOAD_MORE_THREAD_NUM, opts={}
+  def load_n_threads n=LOAD_MORE_THREAD_NUM, query_opts={}
     @interrupt_search = false
     @mbid = BufferManager.say "Searching for threads..."
 
@@ -497,7 +497,7 @@ EOS
 
     orig_size = @ts.size
     last_update = Time.now
-    @ts.load_n_threads(ts_to_load, opts) do |i|
+    @ts.load_n_threads(ts_to_load, query_opts) do |i|
       if (Time.now - last_update) >= 0.25
         BufferManager.say "Loaded #{i.pluralize 'thread'}...", @mbid
         update
@@ -539,20 +539,20 @@ EOS
       n = opts[:num]
     end
 
-    myopts = @load_thread_opts.merge({ :when_done => (lambda do |num|
-      opts[:when_done].call(num) if opts[:when_done]
-
-      if num > 0
-        BufferManager.flash "Found #{num.pluralize 'thread'}."
-      else
-        BufferManager.flash "No matches."
-      end
-    end)})
+    query_opts = @load_thread_opts
 
     if opts[:background] || opts[:background].nil?
-      load_n_threads_background n, myopts
+      load_n_threads_background(n, query_opts) { |num|
+        opts[:when_done].call(num) if opts[:when_done]
+
+        if num > 0
+          BufferManager.flash "Found #{num.pluralize 'thread'}."
+        else
+          BufferManager.flash "No matches."
+        end
+      }
     else
-      load_n_threads n, myopts
+      load_n_threads(n, query_opts)
     end
   end
   ignore_concurrent_calls :load_threads
