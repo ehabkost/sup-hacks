@@ -75,6 +75,7 @@ global_keymap = Keymap.new do |k|
   k.add :search, "Search all messages", '\\', 'F'
   k.add :search_unread, "Show all unread messages", 'U'
   k.add :list_labels, "List labels", 'L'
+  k.add :inbox_labels, "Open Inbox label", 'I'
   k.add :poll, "Poll for new messages", 'P'
   k.add :compose, "Compose new message", 'm', 'c'
   k.add :nothing, "Do nothing", :ctrl_g
@@ -246,6 +247,8 @@ begin
       SearchResultsMode.spawn_from_query "is:unread"
     when :list_labels
       LabelListMode.ask_for_label("Show threads with label (enter for listing): ", "Label list") { |l| LabelSearchResultsMode.spawn_nicely l }
+    when :inbox_labels
+      LabelListMode.ask_for_label("Inbox threads with label (enter for listing): ", "Inbox label list") { |l| InboxSubsetMode.spawn_nicely l }
     when :compose
       ComposeMode.spawn_nicely
     when :poll
