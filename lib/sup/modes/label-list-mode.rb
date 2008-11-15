@@ -35,6 +35,20 @@ class LabelListMode < LineCursorMode
     reload # make sure unread message counts are up-to-date
   end
 
+  def self.ask_for_label prompt, list_title
+    labels = LabelManager.listable_labels.map { |l| LabelManager.string_for l }
+    user_label = BufferManager.ask_with_completions :label, prompt, labels
+    unless user_label.nil?
+      if user_label.empty?
+        BufferManager.spawn_unless_exists(list_title) do
+          LabelListMode.new { |l| yield l }
+        end
+      else
+        yield user_label
+      end
+    end
+  end
+
 protected
 
   def toggle_show_unread_only

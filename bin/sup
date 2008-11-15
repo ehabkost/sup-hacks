@@ -245,17 +245,7 @@ begin
     when :search_unread
       SearchResultsMode.spawn_from_query "is:unread"
     when :list_labels
-      labels = LabelManager.listable_labels.map { |l| LabelManager.string_for l }
-      user_label = bm.ask_with_completions :label, "Show threads with label (enter for listing): ", labels
-      unless user_label.nil?
-        if user_label.empty?
-          bm.spawn_unless_exists("Label list") do
-            LabelListMode.new { |l| LabelSearchResultsMode.spawn_nicely l }
-          end
-        else
-          LabelSearchResultsMode.spawn_nicely user_label
-        end
-      end
+      LabelListMode.ask_for_label("Show threads with label (enter for listing): ", "Label list") { |l| LabelSearchResultsMode.spawn_nicely l }
     when :compose
       ComposeMode.spawn_nicely
     when :poll
