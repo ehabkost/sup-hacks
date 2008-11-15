@@ -9,8 +9,9 @@ class InboxMode < ThreadIndexMode
     k.add :read_and_archive, "Archive thread (remove from inbox) and mark read", 'A'
   end
 
-  def initialize
-    super [:inbox, :sent, :draft], { :label => :inbox, :skip_killed => true }
+  def initialize labels=[]
+    super [:inbox, :sent, :draft], { :label => :inbox, :labels => labels,
+                                     :skip_killed => true }
   end
 
   def archive
