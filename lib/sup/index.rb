@@ -268,7 +268,7 @@ EOS
   end
 
   def contains_id? id
-    @index_mutex.synchronize { @index.search(Ferret::Search::TermQuery.new(:message_id, id)).total_hits > 0 }
+    @index_mutex.synchronize { @index.search(msgid_query(id)).total_hits > 0 }
   end
   def contains? m; contains_id? m.id end
   def size; @index_mutex.synchronize { @index.size } end
@@ -349,7 +349,7 @@ EOS
       lim = [MAX_CLAUSES / 2, pending.length].min
       pending[0 ... lim].each do |id|
         searched[id] = true
-        q.add_query Ferret::Search::TermQuery.new(:message_id, id), :should
+        q.add_query msgid_query(id), :should
         q.add_query Ferret::Search::TermQuery.new(:refs, id), :should
       end
       pending = pending[lim .. -1]
