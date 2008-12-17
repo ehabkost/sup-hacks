@@ -608,6 +608,13 @@ protected
     Ferret::Search::TermQuery.new(:message_id, mid)
   end
 
+  ## shortcut for building a BooleanQuery
+  def and_query coord_disable, occur, *list
+    q = Ferret::Search::BooleanQuery.new coord_disable
+    list.each { |sq| q.add_query sq, occur }
+    return q
+  end
+
   def save_sources fn=Redwood::SOURCE_FN
     @source_mutex.synchronize do
       if @sources_dirty || @sources.any? { |id, s| s.dirty? }
