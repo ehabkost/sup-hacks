@@ -175,8 +175,10 @@ EOS
     end
   end
 
-  ## overwrite me!
-  def is_relevant? m; false; end
+  def is_relevant? m
+    return Index.instance.matches_query? m.id, @query
+  end
+
 
   def handle_added_update sender, m
     add_or_unhide m
