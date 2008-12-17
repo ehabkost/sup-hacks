@@ -428,6 +428,13 @@ EOS
     end
   end
 
+  ## returns true if the message with message-id mid matches query query
+  def matches_query? mid, query
+    @index_mutex.synchronize do
+      return @index.search(and_query(true, :must, msgid_query(mid), query)).total_hits > 0
+    end
+  end
+
   def load_contacts emails, h={}
     q = Ferret::Search::BooleanQuery.new true
     emails.each do |e|
