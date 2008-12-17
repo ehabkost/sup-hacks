@@ -58,6 +58,7 @@ EOS
     ## these guys, and @text and @lines, are not covered
     @load_thread = nil
     @load_thread_opts = load_thread_opts
+    @query = Index.instance.build_query load_thread_opts
     @hidden_labels = hidden_labels + LabelManager::HIDDEN_RESERVED_LABELS
     @date_width = DATE_WIDTH
 
@@ -478,17 +479,17 @@ EOS
     ForwardMode.spawn_nicely :message => m
   end
 
-  def load_n_threads_background n=LOAD_MORE_THREAD_NUM, query_opts={}
+  def load_n_threads_background query, n=LOAD_MORE_THREAD_NUM, query_opts={}
     return if @load_thread # todo: wrap in mutex
     @load_thread = Redwood::reporting_thread("load threads for thread-index-mode") do
-      num = load_n_threads n, query_opts
+      num = load_n_threads query, n, query_opts
       yield num if block_given?
       @load_thread = nil
     end
   end
 
   ## TODO: figure out @ts_mutex in this method
-  def load_n_threads n=LOAD_MORE_THREAD_NUM, query_opts={}
+  def load_n_threads query, n=LOAD_MORE_THREAD_NUM, query_opts={}
     @interrupt_search = false
     @mbid = BufferManager.say "Searching for threads..."
 
@@ -497,7 +498,7 @@ EOS
 
     orig_size = @ts.size
     last_update = Time.now
-    @ts.load_n_threads(ts_to_load, query_opts) do |i|
+    @ts.load_n_threads(query, ts_to_load, query_opts) do |i|
       if (Time.now - last_update) >= 0.25
         BufferManager.say "Loaded #{i.pluralize 'thread'}...", @mbid
         update
@@ -542,7 +543,7 @@ EOS
     query_opts = @load_thread_opts
 
     if opts[:background] || opts[:background].nil?
-      load_n_threads_background(n, query_opts) { |num|
+      load_n_threads_background(@query, n, query_opts) { |num|
         opts[:when_done].call(num) if opts[:when_done]
 
         if num > 0
@@ -552,7 +553,7 @@ EOS
         end
       }
     else
-      load_n_threads(n, query_opts)
+      load_n_threads(@query, n, query_opts)
     end
   end
   ignore_concurrent_calls :load_threads

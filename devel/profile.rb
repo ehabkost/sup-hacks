@@ -3,7 +3,7 @@ require 'ruby-prof'
 require "redwood"
 
 result = RubyProf.profile do
-  Redwood::ThreadSet.new(ARGV.map { |fn| Redwood::MBox::Scanner.new fn }).load_n_threads 100
+  Redwood::ThreadSet.new(ARGV.map { |fn| Redwood::MBox::Scanner.new fn }).load_n_threads nil, 100 # FIXME: query arg?
 end
 
 printer = RubyProf::GraphHtmlPrinter.new(result)
