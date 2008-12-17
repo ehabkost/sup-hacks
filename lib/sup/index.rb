@@ -419,7 +419,7 @@ EOS
 
   def load_entry_for_id mid
     @index_mutex.synchronize do
-      results = @index.search Ferret::Search::TermQuery.new(:message_id, mid)
+      results = @index.search msgid_query(mid)
       return if results.total_hits == 0
       docid = results.hits[0].doc
       entry = @index[docid]
@@ -601,6 +601,11 @@ protected
     query.add_query Ferret::Search::TermQuery.new("label", "deleted"), :must_not unless opts[:load_deleted] || labels.include?(:deleted)
     query.add_query Ferret::Search::TermQuery.new("label", "killed"), :must_not if opts[:skip_killed]
     query
+  end
+
+  ## shortcut for queries involving :message_id
+  def msgid_query mid
+    Ferret::Search::TermQuery.new(:message_id, mid)
   end
 
   def save_sources fn=Redwood::SOURCE_FN
