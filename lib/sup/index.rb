@@ -277,9 +277,8 @@ EOS
   ## you should probably not call this on a block that doesn't break
   ## rather quickly because the results can be very large.
   EACH_BY_DATE_NUM = 100
-  def each_id_by_date opts={}
+  def each_id_by_date_q query, opts
     return if empty? # otherwise ferret barfs ###TODO: remove this once my ferret patch is accepted
-    query = build_query opts
     offset = 0
     while true
       limit = (opts[:limit])? [EACH_BY_DATE_NUM, opts[:limit] - offset].min : EACH_BY_DATE_NUM
@@ -292,6 +291,10 @@ EOS
       break if offset >= results.total_hits - limit
       offset += limit
     end
+  end
+
+  def each_id_by_date opts, &block
+    each_id_by_date_q build_query(opts), opts, &block
   end
 
   def num_results_for opts={}
