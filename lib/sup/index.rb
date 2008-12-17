@@ -274,6 +274,26 @@ EOS
   def size; @index_mutex.synchronize { @index.size } end
   def empty?; size == 0 end
 
+  def build_query opts
+    query = Ferret::Search::BooleanQuery.new
+    query.add_query opts[:qobj], :must if opts[:qobj]
+    labels = ([opts[:label]] + (opts[:labels] || [])).compact
+    labels.each { |t| query.add_query Ferret::Search::TermQuery.new("label", t.to_s), :must }
+    if opts[:participants]
+      q2 = Ferret::Search::BooleanQuery.new
+      opts[:participants].each do |p|
+        q2.add_query Ferret::Search::TermQuery.new("from", p.email), :should
+        q2.add_query Ferret::Search::TermQuery.new("to", p.email), :should
+      end
+      query.add_query q2, :must
+    end
+        
+    query.add_query Ferret::Search::TermQuery.new("label", "spam"), :must_not unless opts[:load_spam] || labels.include?(:spam)
+    query.add_query Ferret::Search::TermQuery.new("label", "deleted"), :must_not unless opts[:load_deleted] || labels.include?(:deleted)
+    query.add_query Ferret::Search::TermQuery.new("label", "killed"), :must_not if opts[:skip_killed]
+    query
+  end
+
   ## you should probably not call this on a block that doesn't break
   ## rather quickly because the results can be very large.
   EACH_BY_DATE_NUM = 100
@@ -591,26 +611,6 @@ protected
     else
       nil
     end
-  end
-
-  def build_query opts
-    query = Ferret::Search::BooleanQuery.new
-    query.add_query opts[:qobj], :must if opts[:qobj]
-    labels = ([opts[:label]] + (opts[:labels] || [])).compact
-    labels.each { |t| query.add_query Ferret::Search::TermQuery.new("label", t.to_s), :must }
-    if opts[:participants]
-      q2 = Ferret::Search::BooleanQuery.new
-      opts[:participants].each do |p|
-        q2.add_query Ferret::Search::TermQuery.new("from", p.email), :should
-        q2.add_query Ferret::Search::TermQuery.new("to", p.email), :should
-      end
-      query.add_query q2, :must
-    end
-        
-    query.add_query Ferret::Search::TermQuery.new("label", "spam"), :must_not unless opts[:load_spam] || labels.include?(:spam)
-    query.add_query Ferret::Search::TermQuery.new("label", "deleted"), :must_not unless opts[:load_deleted] || labels.include?(:deleted)
-    query.add_query Ferret::Search::TermQuery.new("label", "killed"), :must_not if opts[:skip_killed]
-    query
   end
 
   ## shortcut for queries involving :message_id
