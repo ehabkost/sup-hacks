@@ -1,0 +1,26 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: maildir expects new messages to have higher mtime
+desc: |-
+  When saving new messages to a maildir source using mutt, the message
+  mtime is not updated to the time the message was copied to the maildir.
+  This makes sup fail to detect new messages on the maildir.
+  
+  This also makes sup vulnerable to problems if the mtime of the files
+  on the maildir changes. Using just the filenames to identify the messages
+  on maildir sources would be safer.
+type: :bugfix
+component: maildir
+release: 
+reporter: Eduardo Habkost <ehabkost@raisama.net>
+status: :unstarted
+disposition: 
+creation_time: 2009-02-22 18:29:11.606056 Z
+references: []
+
+id: c50e5b16f6aacd22525429e8cb0b51c36cd7e853
+log_events: 
+- - 2009-02-22 18:29:14.621960 Z
+  - Eduardo Habkost <ehabkost@raisama.net>
+  - created
+  - ""
+git_branch: 
